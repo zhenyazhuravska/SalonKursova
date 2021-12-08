@@ -1,0 +1,99 @@
+﻿@{
+    ViewData["Title"] = "Додати запис";
+}
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Contact</title>
+    <link rel="stylesheet" href="~/css/nicepage.css" media="screen">
+    <link rel="stylesheet" href="~/css/Contact.css" media="screen">
+    <script class="u-script" type="text/javascript" src="~/js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="~/js/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Contact">
+    <meta property="og:type" content="website">
+    <style>
+        .btn-primary {
+            background-color: #8bc34a;
+            border-color: #8bc34a;
+
+        }
+        a {
+            color: #8bc34a;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body class="u-body">
+
+    <div class="site-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 mb-5 center">
+                    <h2 class="site-section-heading font-weight-light text-black text-center">Додати запис</h2><br />
+                    <form asp-action="AddAppointment" method="post" class="p-5 bg-white">
+                        <div class="row form-group">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <label class="text-black" for="fname">Ім'я</label>
+                                <input type="text" name="fname" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="text-black" for="lname">Прізвище</label>
+                                <input type="text" name="lname" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+
+                            <div class="col-md-6">
+                                <label class="text-black" for="phone">Телефон</label>
+                                <input type="text" name="phone" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="text-black" for="email">Пошта</label>
+                                <input type="email" name="email" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label class="text-black" for="phone">Оберіть послугу</label> <br />
+                                @Html.DropDownList("Service", ViewBag.Services as SelectList, "", new { @class = "form-control", @style = "text-align: center; " })
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <label class="text-black" for="phone">Оберіть дату</label> <br />
+                                <input class="datefield form-control" data-val="true" data-val-required="Date is required" id="ReleaseDate" name="ReleaseDate" type="date" value="11-30-2021" />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="text-black" for="phone">Оберіть час</label> <br />
+                                <input id="appt-time" type="time" name="appttime" value="13:30" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <input type="submit" value="Додати" class="btn btn-primary py-2 px-4 text-white">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

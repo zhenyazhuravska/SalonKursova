@@ -1,0 +1,98 @@
+﻿@model List<Service>
+@{
+    ViewData["Title"] = "Послуги";
+}
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Contact</title>
+    <link rel="stylesheet" href="~/css/nicepage.css" media="screen">
+    <link rel="stylesheet" href="~/css/Contact.css" media="screen">
+    <script class="u-script" type="text/javascript" src="~/js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="~/js/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Contact">
+    <meta property="og:type" content="website">
+    <style>
+        body {
+            font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+        .btn-primary {
+            background-color: #8bc34a;
+            border-color: #8bc34a;
+
+        }
+        a {
+            color: #8bc34a;
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+            text-align: center;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body class="u-body">
+    <div class="center">
+        <h2 class="site-section-heading font-weight-light text-black text-center text-bold">Список наших послуг</h2>
+
+    </div>
+    <form asp-action="Services" method="get" class="center">
+        <h1 class="mb-3 h6 text-uppercase text-black d-block">
+            @Html.DropDownList("Category", ViewBag.Categories as SelectList, "", new { @style = "width : 400px; font-size: 20px;text-align: center; margin-left: 363px; " })
+            <input type="submit" value="Фільтрувати" class="btn btn-primary py-2 px-4 text-white" style="margin-top: 10px" />
+        </h1>
+
+    </form>
+
+
+    <table class="center">
+        <tbody>
+            <tr style="height: 48px;">
+                <td style="height: 48px;"><strong>Назва послуги</strong></td>
+                <td style="height: 48px; width: 200px; text-align: center;"></td>
+                <td style="height: 48px; width: 600px; text-align: center;"><strong>Ціна, грн</strong></td>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr style="height: 48px;">
+                    <td style="height: 48px;">@item.Name</td>
+                    <td style="height: 48px; width: 200px; text-align: center;"></td>
+                    <td style="height: 48px; width: 600px; text-align: center;">@item.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="site-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2 class="mb-4 text-black">Ми хочемо, щоб Ви виглядали неймовірно</h2>
+                    <p class="mb-0"><a asp-action="Appointment" class="btn btn-primary py-3 px-5 text-white">Відвідати салон зараз</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

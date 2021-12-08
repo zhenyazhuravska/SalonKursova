@@ -1,0 +1,99 @@
+﻿<!DOCTYPE <html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Salon</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/nicepage.css" media="screen">
+    <link rel="stylesheet" href="~/css/Home.css" media="screen">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/css/jquery-ui.css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="~/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+    <link rel="stylesheet" href="~/css/aos.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <script class="u-script" type="text/javascript" src="~/js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="~/js/nicepage.js" defer=""></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/startbootstrap-simple-sidebar@5.1.2/css/simple-sidebar.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .u-nav-item a {
+            color: #8bc34a !important;
+        }
+        .u-nav-item a:active {
+            color: #ffc0cb !important;
+        }
+        .u-nav-item a:hover {
+            color: hotpink !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="u-clearfix u-header u-header" id="sec-7624">
+        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+            <a class="u-image u-logo u-image-1" style="margin-left: 10px">
+                <img src="~/images/logo.png" class="u-logo-image u-logo-image-1">
+            </a>
+            <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+                <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+                    <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+                        <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs>
+                                <symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;">
+                                    <rect y="1" width="16" height="2"></rect>
+                                    <rect y="7" width="16" height="2"></rect>
+                                    <rect y="13" width="16" height="2"></rect>
+                                </symbol>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+                <div class="u-nav-container">
+                    <ul class="u-nav u-unstyled u-nav-1">
+                        <li class="u-nav-item">
+                            <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" asp-controller="Home" asp-action="Index" style="padding: 10px 20px;">Головна</a>
+                        </li>
+                        <li class="u-nav-item">
+                            <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" asp-controller="Home" asp-action="Services" style="padding: 10px 20px;">Послуги</a>
+                            
+                        </li>
+                        <li class="u-nav-item">
+                            <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" asp-controller="Home" asp-action="Appointment" style="padding: 10px 20px;">Запис</a>
+                        </li>
+                        <li class="u-nav-item">
+                            <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" asp-controller="Home" asp-action="About" style="padding: 10px 20px;">Про нас</a>
+                        </li>
+                        <li class="u-nav-item">
+                            <a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" asp-controller="Home" asp-action="Contact" style="padding: 10px 20px;">Контакти</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

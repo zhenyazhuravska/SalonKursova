@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Код доступу";
+}
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Contact</title>
+    <link rel="stylesheet" href="~/css/nicepage.css" media="screen">
+    <link rel="stylesheet" href="~/css/Contact.css" media="screen">
+    <script class="u-script" type="text/javascript" src="~/js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="~/js/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Contact">
+    <meta property="og:type" content="website">
+    <style>
+        .btn-primary {
+            background-color: #8bc34a;
+            border-color: #8bc34a;
+
+        }
+        a {
+            color: #8bc34a;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body class="u-body">
+
+    <div class="site-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 mb-4 center">
+                    <h2 class="site-section-heading font-weight-light text-black text-center">Введіть код доступу для переходу в режим адміністратора</h2><br />
+                    <form asp-controller="Admin" asp-action="AdminPage" method="post" class="p-5 bg-white">
+                        <div class="row form-group">
+                            <div class="col-md-6 center">
+                                <input type="password" name="code" class="form-control" required="required" style="text-align: center;">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-6 center">
+                                <input type="submit" value="Підтвердити" class="btn btn-primary py-2 px-4 text-white center">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

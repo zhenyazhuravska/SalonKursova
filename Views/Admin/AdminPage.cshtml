@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Режим адміністратора";
+}
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Home</title>
+    <link rel="stylesheet" href="~/css/nicepage.css" media="screen">
+    <link rel="stylesheet" href="~/css/Home.css" media="screen">
+    <script class="u-script" type="text/javascript" src="~/js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="~/js/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 3.28.7, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+    <style>
+        body {
+            font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+        .u-text-palette-1-base svg {
+            fill: #8bc34a;
+        }
+        .text-primary {
+            color: #8bc34a !important;
+        }
+        .bg-image:after {
+            background: none;
+        }
+    </style>
+</head>
+
+<body class="u-body">
+    
+    <div class="site-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-7">
+                    <h2 class="site-section-heading font-weight-light text-black text-center">Ваші можливості</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 text-center mb-5 mb-lg-5">
+                    <div class="h-100 p-4 p-lg-5 bg-light site-block-feature-7">
+                        <button type="button" style="margin: 3px; width: 50%; top:5%; left: 38%;" class="btn btn-success" onclick="location.href='@Url.Action("AllCategories", "Admin")';return false;">Переглянути</button><br />
+                        <p class="text-black h4">Список категорій</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 text-center mb-5 mb-lg-5">
+                    <div class="h-100 p-4 p-lg-5 bg-light site-block-feature-7">
+                        <button type="button" style="margin: 3px; width: 50%; top:5%; left: 38%;" class="btn btn-success" onclick="location.href='@Url.Action("AllServices", "Admin")';return false;">Переглянути</button><br />
+                        <p class="text-black h4">Список послуг</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 text-center mb-5 mb-lg-5">
+                    <div class="h-100 p-4 p-lg-5 bg-light site-block-feature-7">
+                        <button type="button" style="margin: 3px; width: 50%; top:5%; left: 38%;" class="btn btn-success" onclick="location.href='@Url.Action("AllClients", "Admin")';return false;">Переглянути</button><br />
+                        <p class="text-black h4">Список клієнтів</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-lg-4 text-center mb-5 mb-lg-5">
+                    <div class="h-100 p-4 p-lg-5 bg-light site-block-feature-7">
+                        <button type="button" style="margin: 3px; width: 50%; top:5%; left: 38%;" class="btn btn-success" onclick="location.href='@Url.Action("AllWorkers", "Admin")';return false;">Переглянути</button><br />
+                        <p class="text-black h4">Список працівників</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 text-center mb-5 mb-lg-5">
+                </div>
+                <div class="col-md-8 col-lg-4 text-center mb-5 mb-lg-5">
+                    <div class="h-100 p-4 p-lg-5 bg-light site-block-feature-7">
+                        <button type="button" style="margin: 3px; width: 50%; top:5%; left: 38%;" class="btn btn-success" onclick="location.href='@Url.Action("AllAppointments", "Admin")';return false;">Переглянути</button><br />
+                        <p class="text-black h4">Список записів</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
